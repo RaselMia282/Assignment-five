@@ -28,7 +28,7 @@ for (let btn of callButtons) {
     // Coin deduct
     coinCounter.innerText = currentCoins - 20;
 
-    // Card থেকে service info নিয়ে আসা
+    
     const card = this.closest('div.p-4');
     const serviceName = card.querySelector('.service-name').innerText;
     const number = card.querySelector('.service-number').innerText;
@@ -72,10 +72,10 @@ for (let btn of copyButtons) {
       .then(() => {
         alert("Number copied to clipboard!");
 
-        // Copy count navbar এ update করা
+        
         const copyBtnNavbar = document.querySelector('button.bg-green-700'); // navbar copy button
-        let currentText = copyBtnNavbar.innerText; // ex: "2 Copy"
-        let currentCount = parseInt(currentText); // 2
+        let currentText = copyBtnNavbar.innerText; 
+        let currentCount = parseInt(currentText); 
         copyBtnNavbar.innerText = (currentCount + 1) + " Copy";
       })
       .catch(err => {
